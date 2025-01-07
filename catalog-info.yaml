@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: c6u522nda-python-gitops
+  description: This is GitOps manifest for c6u522nda-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: c6u522nda-python
+    backstage.io/kubernetes-id: c6u522nda-python 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: c6u522nda-python   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:c6u522nda-python
